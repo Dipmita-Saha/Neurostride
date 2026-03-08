@@ -1,0 +1,21 @@
+{
+  "backend": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true,
+    "model_path": "models/gait_model.pth",
+    "sequence_length": 48,
+    "device": "cpu"
+  },
+  "frontend": {
+    "host": "localhost",
+    "port": 8080,
+    "backend_url": "http://localhost:5000"
+  },
+  "analysis": {
+    "min_detection_confidence": 0.5,
+    "min_tracking_confidence": 0.5,
+    "suspicious_threshold": 75,
+    "buffer_size": 48
+  }
+}
